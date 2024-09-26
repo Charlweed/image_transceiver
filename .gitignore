@@ -1,0 +1,5 @@
+__pycache__/
+.idea/
+.vs/
+*.py[cod]
+js_broken/
