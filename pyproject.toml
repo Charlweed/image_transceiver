@@ -1,7 +1,7 @@
 [project]
 name = "image_transceiver"
 description = "ImageTransceiver is a custom node that enables image generating clients to connect directly to ComfyUI, and send those images in near real-time. For example, an image manipulation program like GIMP can connect an image to a workflow in ComfyUI, and every time the image changes in GIMP, the changes are immediately made in the workflow. Cloning"
-version = "1.0.0"
+version = "0.7.6.1"
 license = {file = "LICENSE"}
 
 [project.urls]
@@ -9,6 +9,6 @@ Repository = "https://github.com/Charlweed/image_transceiver"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "charlweed"
 DisplayName = "image_transceiver"
-Icon = ""
+Icon = "https://github.com/Charlweed/image_transceiver/blob/2ba3d544d0d974e787d49a847bd6bf9c85fbb2f8/illustrations/transceiver_256sq.png"
