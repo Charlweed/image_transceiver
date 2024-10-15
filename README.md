@@ -9,9 +9,11 @@ ImageTransceiver is a custom node that enables image generating clients to conne
 # Cloning
 ### Important:
 This project is a companion project to GimpComfyUI. You should clone that project first, and investigate
-its contents. You might not want to clone this project at all. GimpComfyUI requires Gimp 2.99.18
-development release, or Gimp 3.0.x.
-If you wish to review or modify the code of this project, you can clone it into a local directory, and change the COMFY_NODE_PROJ URL in the gimp_comfy_ui/installer.py script from a GitHub url to a local protocol url. For example, you can change:
+its contents. You might not want to clone this project at all. GimpComfyUI requires GIMP 2.99.18+
+development release, or GIMP 3.0+
+If you wish to review or modify the code of this project, you can clone it into a local directory, and change the
+COMFY_NODE_PROJ URL in the gimp_comfy_ui/installer.py script from a GitHub url to a local protocol url. For example, you
+can change:
 
 `COMFY_NODE_PROJ: "https://github.com/Charlweed/comfy_image_transceiver_controller`
 
@@ -60,7 +62,7 @@ foreach($subject in $c_node_sources){
 ```
 
 # Usage
-After image_transceiver is installed in ComfyUI, and a source such as Gimp 2.99.18+ development release, or Gimp 3.0.x.,
+After image_transceiver is installed in ComfyUI, and a source such as GIMP 2.99.18+ development release, or GIMP 3.0.x.,
 start the ComfyUI server. Check the logs to ensure there are no errors. The log should show that image_transceiver was
 loaded. You should see text that looks like:
 ```commandline
@@ -107,10 +109,10 @@ denoise=0.87
 ```
 
 ## GIMP
-Start Gimp 2.99.18+ development release, or Gimp 3.0.x, and load an image. For best initial results, choose a modestly
+Start GIMP 2.99.18+ development release, or GIMP 3.0.x, and load an image. For best initial results, choose a modestly
 sized image. Here, we use the 764x764 sketch from the img2img ComfyUI demo, so you can see how your painting changes
 the final results.
-You should see the GimpComfyUI menu at the top of the Gimp Window. Insure your main image layer is selected, then
+You should see the GimpComfyUI menu at the top of the GIMP Window. Insure your main image layer is selected, then
 navigate the menus to "GimpComfyUI" ➳ "Live Connections" ➳ "Follow-in-ComfyUI"
 <img src="./illustrations/gimp_menus_00.png" alt="GIMP dialog_00" width="512" />
 
@@ -119,7 +121,7 @@ A daemon dialog will appear. Select the radio button "Queue prompt Automatically
 
 Now, you can paint, draw, cut, spray, whatever, into that layer, and the changes will affect what ComfyUI
 generates. Sometimes your manipulations will yield exactly what you might expect, often they will not.  All the
-prompt-crafting issues are in play, but lower "denoise" strengthens how much the Gimp image comes through to the final
+prompt-crafting issues are in play, but lower "denoise" strengthens how much the GIMP image comes through to the final
 image.
 
 # Contributing

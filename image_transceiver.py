@@ -60,7 +60,7 @@ class ServerOperation(Enum):
 class ControllerCommand(Enum):
     """
     Commands for the Transceiver_Controller. Often, will be forwarded to ComfyUI.
-    Ideally, this would be in a single module used by both Gimp and ComfyUI.
+    Ideally, this would be in a single module used by both GIMP and ComfyUI.
     """
     # Usage: Brackets for name, parentheses for value
     ATTENTION = "command"
