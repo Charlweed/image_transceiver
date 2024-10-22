@@ -1,7 +1,8 @@
 [project]
 name = "image_transceiver"
 description = "ImageTransceiver is a custom node that enables image generating clients to connect directly to ComfyUI, and send those images in near real-time. For example, an image manipulation program like GIMP can connect an image to a workflow in ComfyUI, and every time the image changes in GIMP, the changes are immediately made in the workflow. Cloning"
-version = "0.7.8.1"
+# Version must have exactly three fields, with period as delimiter.
+version = "0.7.8"
 license = {file = "LICENSE"}
 
 [project.urls]
