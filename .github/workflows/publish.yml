@@ -3,7 +3,8 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+    # Only publish when this publish-to-comfy_org branch is pushed
+      - publish-to-comfy_org
     paths:
       - "pyproject.toml"
 
@@ -11,11 +12,23 @@ jobs:
   publish-node:
     name: Publish Custom Node to registry
     runs-on: ubuntu-latest
-    # if this is a forked repository. Skipping the workflow.
+    # if this is a forked repository, skip this workflow.
     if: github.event.repository.fork == false
     steps:
       - name: Check out code
         uses: actions/checkout@v4
+        with:
+          ref: "publish-to-comfy_org"
+      - name: Remove extraneous files
+        run: |
+          rm -rf ".git"
+          rm -rf ".github"
+          rm -f ".gitignore"
+          rm -rf ".idea"
+          rm -f "demonstrator.py"
+          rm -rf "illustrations"
+          rm -rf "project.toml"
+          rm -f "README.MD"
       - name: Publish Custom Node
         uses: Comfy-Org/publish-node-action@main
         with:
