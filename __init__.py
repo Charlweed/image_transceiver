@@ -16,7 +16,7 @@
 #
 
 #  Synchronize with value in image_transceiver_controller.js and in gimp_comfyui.py */
-__version__ = "0.7.7.3"
+__version__ = "0.7.8.1"
 
 # Image Transceiver Module
 
