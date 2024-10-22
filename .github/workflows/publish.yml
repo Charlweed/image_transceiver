@@ -19,16 +19,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: "publish-to-comfy_org"
-      - name: Remove extraneous files
-        run: |
-          rm -rf ".git"
-          rm -rf ".github"
-          rm -f ".gitignore"
-          rm -rf ".idea"
-          rm -f "demonstrator.py"
-          rm -rf "illustrations"
-          rm -rf "project.toml"
-          rm -f "README.MD"
       - name: Publish Custom Node
         uses: Comfy-Org/publish-node-action@main
         with:
