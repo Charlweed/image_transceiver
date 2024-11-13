@@ -62,7 +62,7 @@ class ImageTransceiverController {
   /** @type {string} */
   static TRANSCEIVER_MSG_KEY = "TRANSCEIVER_MSG";
  /** @type {string} The version of this class. Synchronize with value in __init__.py and in gimp_comfyui.py */
-  static VERSION = "0.7.4.0"
+  static VERSION = "0.7.10"
 
   /**
    * The content to draw in the node. Should be a base64 encoded data url.
