@@ -129,6 +129,14 @@ image.
 This is very much alpha software. If you see a problem, or opportunities for improvement, please open an issue and make
 a pull request. I am also open to adding some contributors to this project, and it's companion.
 
+# Publishing this node.
+This note is currently only for the current developer, yours truly, but ...
+To publish on comfy.org,
+. L:\environments\python311_64bit_comfy_01\Scripts\Activate.ps1
+Set-Location <bla-bla>\comfyui_custom_nodes\image_transceiver
+<copy API key to clipboard and paste it when prompted. Ignore warnign about workspace.>
+comfy node publish
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
