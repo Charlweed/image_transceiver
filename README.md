@@ -132,10 +132,12 @@ a pull request. I am also open to adding some contributors to this project, and 
 # Publishing this node.
 This note is currently only for the current developer, yours truly, but ...
 To publish on comfy.org,
+```
 . L:\environments\python311_64bit_comfy_01\Scripts\Activate.ps1
 Set-Location <bla-bla>\comfyui_custom_nodes\image_transceiver
-<copy API key to clipboard and paste it when prompted. Ignore warnign about workspace.>
+# copy API key to clipboard and paste it when prompted. Ignore warning about workspace.
 comfy node publish
+```
 
 ## License
 
