@@ -27,6 +27,27 @@
 import { app } from "../../scripts/app.js";
 import { api } from "../../scripts/api.js";
 
+function getNativeClass(obj) {
+  /**
+    JavaScript implements prototype-based object orientation, so "class name" is often not useful.
+    Accordingly, this function is not very useful, because most instances are just an Object.
+  **/
+  if (typeof obj === "undefined") return "undefined";
+  if (obj === null) return "null";
+  return Object.prototype.toString.call(obj).match(/^\[object\s(.*)\]$/)[1];
+}
+
+function getAnyClass(obj) {
+  /**
+    JavaScript implements prototype-based object orientation, so "class name" is often not useful.
+    This function MIGHT be useful for identifying instances, or might not.
+  **/
+  if (typeof obj === "undefined") return "undefined";
+  if (obj === null) return "null";
+  return obj.constructor.name;
+}
+
+
 /**
  * Controller for browser view and python model. Holds state so callbacks like renderTransceiverViewNode() can draw
  * the node with its canvasRenderingContext2D.
@@ -62,7 +83,7 @@ class ImageTransceiverController {
   /** @type {string} */
   static TRANSCEIVER_MSG_KEY = "TRANSCEIVER_MSG";
  /** @type {string} The version of this class. Synchronize with value in __init__.py and in gimp_comfyui.py */
-  static VERSION = "0.7.10"
+  static VERSION = "0.7.11"
 
   /**
    * The content to draw in the node. Should be a base64 encoded data url.
@@ -332,11 +353,9 @@ class ImageTransceiverController {
     const SHRINKER = 0.93;
     const NODE_X_INSET = 10 * SHRINKER;
     const NODE_Y_INSET = 55 * SHRINKER;
+    // JavaScript implements prototype-based object orientation, so "class name" is rarely useful.
+    const MY_DERIVED_CLASS_NAME = getAnyClass(this);
 
-    if (!Object.hasOwn(this.transceiverViewNode, "pos")) {
-      throw new TypeError("transceiverViewNode has no pos property.");
-      return;
-    }
     const node_width = this.transceiverViewNode.size[0] - NODE_X_INSET;
     const node_height = this.transceiverViewNode.size[1] - NODE_Y_INSET;
     const miniframe_top_left_x = NODE_X_INSET;
