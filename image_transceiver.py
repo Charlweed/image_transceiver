@@ -17,6 +17,7 @@
 import asyncio
 import json
 import hashlib
+import logging
 import numpy as np
 import time
 import torch
@@ -230,7 +231,7 @@ class ImageTransceiver:
     RETURN_TYPES (`tuple`):
         The type of each element in the output tuple.
     RETURN_NAMES (`tuple`):
-        Optional: The name of each output in the output tuple.
+        Optional. The name of each output in the output tuple.
     FUNCTION (`str`):
         The name of the entry-point method. For example, if `FUNCTION = "execute"` then it will run Example().execute()
     OUTPUT_NODE ([`bool`]):
