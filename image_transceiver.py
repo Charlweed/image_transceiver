@@ -17,7 +17,6 @@
 import asyncio
 import json
 import hashlib
-import logging
 import numpy as np
 import time
 import torch
